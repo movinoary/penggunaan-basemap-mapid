@@ -1,38 +1,178 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Start Global */
+.button {
+  padding: 3px 6px;
+  width: 100%;
+  text-transform: capitalize;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.select,
+.select option {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #319da0;
+  padding: 3px;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#green {
+  border: 1px solid #319da0;
+  color: #f8f4ea;
+  background-color: #319da0;
+}
+#white {
+  border: 1px solid #319da0;
+  color: #319da0;
+  background-color: transparent;
+}
+/* End Global */
+
+/* Start Nav */
+.nav_section {
+  background-color: #319da0;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding: 0 5rem;
+  gap: 1rem;
+}
+
+.nav_logo {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.nav_title {
+  background-color: #f8f4ea;
+  width: 300px;
+  border-radius: 10px;
+  padding: 10px;
+}
+/* End Nav */
+
+/* Start Map */
+.map_section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2rem;
+  padding: 1rem 4%;
 }
 
-.App-link {
-  color: #61dafb;
+.popup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.popup h1 {
+  border-bottom: 1px solid #319da0;
 }
+
+.popup_paragraf {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup_paragraf p {
+  width: 100px;
+}
+
+.popup_paragraf h3 {
+  width: 100%;
+  font-weight: 600;
+}
+
+.pupup_button {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+/* ISOCHRONE */
+.isochrone_section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.isochrone_title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-bottom: 1px solid #319da0;
+}
+
+.isochrone_title h1 span {
+  color: #319da0;
+}
+
+.isochrone_row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.isochrone_row h3 {
+  font-weight: 500;
+}
+
+.isochrone_row_button {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.isochrone_info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.isochrone_info h1 {
+  border-bottom: 1px solid #319da0;
+}
+
+.isochrone_info_row {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.isochrone_info_row h3 {
+  width: 100%;
+}
+
+/* End Map */
+
+/* Start Description */
+.description_card {
+  width: 100%;
+  height: 100px;
+  background-color: #d9d9d9;
+}
+/* End Description */
+
+/* Start About */
+.about_section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 4%;
+}
+
+.about_card {
+  width: 100%;
+  height: 150px;
+  background-color: #d9d9d9;
+}
+/* End About */
