@@ -33,7 +33,7 @@ const Map = () => {
   const [viewport, setViewport] = useState({
     latitude: -6.914744,
     longitude: 107.609811,
-    zoom: 13,
+    zoom: 12,
   });
 
   const handleClick = (e) => {
@@ -87,7 +87,7 @@ const Map = () => {
 
   return (
     <MapGL
-      style={{ width: "90vw", height: "80vh" }}
+      style={{ width: "100vw", height: "100vh" }}
       mapStyle="mapbox://styles/mapbox/streets-v12"
       accessToken={token}
       latitude={viewport.latitude}
