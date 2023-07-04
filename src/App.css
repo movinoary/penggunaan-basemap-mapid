@@ -13,6 +13,20 @@
   cursor: pointer;
 }
 
+.close_popup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff0000;
+  color: #ffffff;
+  font-size: 12px;
+  width: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 .select,
 .select option {
   width: 100%;

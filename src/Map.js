@@ -14,6 +14,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 const Map = () => {
   // Kumpulan Data
   const [dataPopup, setDataPopup] = useState({});
+  const [showPopup, setShowPopup] = useState(false);
   const [dataBuffer, setDataBuffer] = useState({});
   const [dataIsochrone, setDataIsochrone] = useState({});
 
@@ -38,7 +39,10 @@ const Map = () => {
 
   const handleClick = (e) => {
     setDataPopup(e);
+    setShowPopup(!showPopup);
   };
+
+  const handleClose = () => setShowPopup(!showPopup);
 
   const clickBuffer = (e) => {
     let center = [e.lng, e.lat];
@@ -153,162 +157,169 @@ const Map = () => {
         </>
       ) : null}
 
-      <Popup
-        tipSize={7}
-        anchor="bottom"
-        longitude={dataPopup?.lngLat?.lng ? dataPopup?.lngLat?.lng : null}
-        latitude={dataPopup?.lngLat?.lat ? dataPopup?.lngLat?.lat : null}
-        closeButton={true}
-        closeOnClick={false}
-      >
-        {showMode === "isochrone" ? (
-          <div className="isochrone_section">
-            <div className="isochrone_title">
-              <h1>
-                {dataPopup?.features?.[0]?.properties?.name}{" "}
-                <span>Isochrone</span>
-              </h1>
-            </div>
-            <div>
-              <h3>Pilih Tipe Perjalanan</h3>
-              <div className="isochrone_row_button">
-                <button
-                  className="button"
-                  id={profile === "walking" ? "white" : "green"}
-                  onClick={() => setProfile("walking")}
-                >
-                  Jalan
-                </button>
-                <button
-                  className="button"
-                  id={profile === "cycling" ? "white" : "green"}
-                  onClick={() => setProfile("cycling")}
-                >
-                  Sepedah
-                </button>
-                <button
-                  className="button"
-                  id={profile === "driving" ? "white" : "green"}
-                  onClick={() => setProfile("driving")}
-                >
-                  Mobil
-                </button>
+      {showPopup && (
+        <Popup
+          tipSize={7}
+          anchor="bottom"
+          longitude={dataPopup?.lngLat?.lng ? dataPopup?.lngLat?.lng : null}
+          latitude={dataPopup?.lngLat?.lat ? dataPopup?.lngLat?.lat : null}
+          closeButton={false}
+          closeOnClick={false}
+        >
+          <buttton onClick={() => handleClose()} className="close_popup">
+            x
+          </buttton>
+          {showMode === "isochrone" ? (
+            <div className="isochrone_section">
+              <div className="isochrone_title">
+                <h1>
+                  {dataPopup?.features?.[0]?.properties?.name}{" "}
+                  <span>Isochrone</span>
+                </h1>
               </div>
-            </div>
-            {profile ? (
               <div>
-                <h3>Pilih Tipe </h3>
+                <h3>Pilih Tipe Perjalanan</h3>
                 <div className="isochrone_row_button">
                   <button
                     className="button"
-                    id={methods === "contours_minutes" ? "white" : "green"}
-                    onClick={() => setMethods("contours_minutes")}
+                    id={profile === "walking" ? "white" : "green"}
+                    onClick={() => setProfile("walking")}
                   >
-                    Waktu
+                    Jalan
                   </button>
                   <button
                     className="button"
-                    id={methods === "contours_meters" ? "white" : "green"}
-                    onClick={() => setMethods("contours_meters")}
+                    id={profile === "cycling" ? "white" : "green"}
+                    onClick={() => setProfile("cycling")}
                   >
-                    Jarak
+                    Sepedah
+                  </button>
+                  <button
+                    className="button"
+                    id={profile === "driving" ? "white" : "green"}
+                    onClick={() => setProfile("driving")}
+                  >
+                    Mobil
                   </button>
                 </div>
               </div>
-            ) : null}
-            {methods === "contours_minutes" ? (
-              <div>
-                <h3>Pilih Tipe Waktu</h3>
-                <select
-                  className="select"
-                  onChange={(e) => setInterval(e.target.value)}
-                >
-                  <option hidden>Menit</option>
-                  <option value="10">10 Menit</option>
-                  <option value="20">20 Menit</option>
-                  <option value="30">30 Menit</option>
-                </select>
-              </div>
-            ) : methods === "contours_meters" ? (
-              <div>
-                <h3>Pilih Tipe Jarak</h3>
-                <select
-                  className="select"
-                  onChange={(e) => setInterval(e.target.value)}
-                >
-                  <option hidden>Kilometer</option>
-                  <option value="500">0,5 Kilometer</option>
-                  <option value="1000">1 Kilometer</option>
-                  <option value="5000">5 Kilometer</option>
-                </select>
-              </div>
-            ) : null}
+              {profile ? (
+                <div>
+                  <h3>Pilih Tipe </h3>
+                  <div className="isochrone_row_button">
+                    <button
+                      className="button"
+                      id={methods === "contours_minutes" ? "white" : "green"}
+                      onClick={() => setMethods("contours_minutes")}
+                    >
+                      Waktu
+                    </button>
+                    <button
+                      className="button"
+                      id={methods === "contours_meters" ? "white" : "green"}
+                      onClick={() => setMethods("contours_meters")}
+                    >
+                      Jarak
+                    </button>
+                  </div>
+                </div>
+              ) : null}
+              {methods === "contours_minutes" ? (
+                <div>
+                  <h3>Pilih Tipe Waktu</h3>
+                  <select
+                    className="select"
+                    onChange={(e) => setInterval(e.target.value)}
+                  >
+                    <option hidden>Menit</option>
+                    <option value="10">10 Menit</option>
+                    <option value="20">20 Menit</option>
+                    <option value="30">30 Menit</option>
+                  </select>
+                </div>
+              ) : methods === "contours_meters" ? (
+                <div>
+                  <h3>Pilih Tipe Jarak</h3>
+                  <select
+                    className="select"
+                    onChange={(e) => setInterval(e.target.value)}
+                  >
+                    <option hidden>Kilometer</option>
+                    <option value="500">0,5 Kilometer</option>
+                    <option value="1000">1 Kilometer</option>
+                    <option value="5000">5 Kilometer</option>
+                  </select>
+                </div>
+              ) : null}
 
-            {interval ? (
-              <button
-                className="button"
-                id="green"
-                onClick={() => clickIsochrone()}
-              >
-                Tampilkan
-              </button>
-            ) : null}
-          </div>
-        ) : (
-          <div className="popup">
-            <h1>{dataPopup?.features?.[0]?.properties?.name}</h1>
-            <div>
-              <div className="popup_paragraf">
-                <p>alamat</p>
-                <h3>{dataPopup?.features?.[0]?.properties?.alamat}</h3>
+              {interval ? (
+                <button
+                  className="button"
+                  id="green"
+                  onClick={() => clickIsochrone()}
+                >
+                  Tampilkan
+                </button>
+              ) : null}
+            </div>
+          ) : (
+            <div className="popup">
+              <h1>{dataPopup?.features?.[0]?.properties?.name}</h1>
+              <div>
+                <div className="popup_paragraf">
+                  <p>alamat</p>
+                  <h3>{dataPopup?.features?.[0]?.properties?.alamat}</h3>
+                </div>
+                <div className="popup_paragraf">
+                  <p>No Telp</p>
+                  <h3>{dataPopup?.features?.[0]?.properties?.telephone}</h3>
+                </div>
               </div>
-              <div className="popup_paragraf">
-                <p>No Telp</p>
-                <h3>{dataPopup?.features?.[0]?.properties?.telephone}</h3>
+              {showInfo === "isochrone" ? (
+                <div className="isochrone_info">
+                  <h1>PIlihan Mode</h1>
+                  <div className="isochrone_info_row">
+                    <h3>Tipe Perjalanan</h3>
+                    <button className="button" id="green">
+                      {profile}
+                    </button>
+                  </div>
+                  <div className="isochrone_info_row">
+                    <h3>Tipe Metode</h3>
+                    <button className="button" id="green">
+                      {methods === "contours_minutes" ? "Menit" : "Jarak"}
+                    </button>
+                  </div>
+                  <div className="isochrone_info_row">
+                    <h3>
+                      {methods === "contours_minutes" ? "Menit" : "Jarak"}
+                    </h3>
+                    <button className="button" id="green">
+                      {interval}
+                    </button>
+                  </div>
+                </div>
+              ) : null}
+              <div className="pupup_button">
+                <button
+                  className="button"
+                  id="green"
+                  onClick={() => clickBuffer(dataPopup?.lngLat)}
+                >
+                  buffer
+                </button>
+                <button
+                  className="button"
+                  id="white"
+                  onClick={() => clickModeIsochrone()}
+                >
+                  isochrone
+                </button>
               </div>
             </div>
-            {showInfo === "isochrone" ? (
-              <div className="isochrone_info">
-                <h1>PIlihan Mode</h1>
-                <div className="isochrone_info_row">
-                  <h3>Tipe Perjalanan</h3>
-                  <button className="button" id="green">
-                    {profile}
-                  </button>
-                </div>
-                <div className="isochrone_info_row">
-                  <h3>Tipe Metode</h3>
-                  <button className="button" id="green">
-                    {methods === "contours_minutes" ? "Menit" : "Jarak"}
-                  </button>
-                </div>
-                <div className="isochrone_info_row">
-                  <h3>{methods === "contours_minutes" ? "Menit" : "Jarak"}</h3>
-                  <button className="button" id="green">
-                    {interval}
-                  </button>
-                </div>
-              </div>
-            ) : null}
-            <div className="pupup_button">
-              <button
-                className="button"
-                id="green"
-                onClick={() => clickBuffer(dataPopup?.lngLat)}
-              >
-                buffer
-              </button>
-              <button
-                className="button"
-                id="white"
-                onClick={() => clickModeIsochrone()}
-              >
-                isochrone
-              </button>
-            </div>
-          </div>
-        )}
-      </Popup>
+          )}
+        </Popup>
+      )}
     </MapGL>
   );
 };

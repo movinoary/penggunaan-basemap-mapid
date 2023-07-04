@@ -13,7 +13,7 @@
     "mapbox-gl": "^2.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-map-gl": "^7.0.21",
+    "react-map-gl": "^5.3.21",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -33,7 +33,11 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "not safari < 10",
+      "not chrome < 51",
+      "not android < 5",
+      "not ie < 12"
     ],
     "development": [
       "last 1 chrome version",
