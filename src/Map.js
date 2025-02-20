@@ -29,8 +29,9 @@ const Map = () => {
   const [methods, setMethods] = useState("");
   const [interval, setInterval] = useState("");
 
+  const MAP_SERVICE_KEY = "67b74a388bd6017a6d11772a";
   const token =
-    "pk.eyJ1Ijoidmlub2FyeXN0aW8iLCJhIjoiY2w2czRtNzYxMG1xbDNrbGo1N3k4a3NuciJ9.VHdXy-kV3UZLqcFF601K6A";
+    "pk.eyJ1Ijoidmlub2FyeXN0aW8iLCJhIjoiY2x2M2JhMXlmMHBlaTJsb3FsM3hnNzBvOCJ9.9t-e--GUark8BwfBuRDchg";
   const [viewport, setViewport] = useState({
     latitude: -6.914744,
     longitude: 107.609811,
@@ -92,7 +93,8 @@ const Map = () => {
   return (
     <MapGL
       style={{ width: "100vw", height: "100vh" }}
-      mapStyle="mapbox://styles/mapbox/streets-v12"
+      // mapStyle="mapbox://styles/mapbox/streets-v12"
+      mapStyle={`https://basemap.mapid.io/styles/street-new-generation/style.json?key=${MAP_SERVICE_KEY}`}
       accessToken={token}
       latitude={viewport.latitude}
       longitude={viewport.longitude}
