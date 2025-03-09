@@ -29,9 +29,8 @@ const Map = () => {
   const [methods, setMethods] = useState("");
   const [interval, setInterval] = useState("");
 
-  const MAP_SERVICE_KEY = "67b74a388bd6017a6d11772a";
-  const token =
-    "pk.eyJ1Ijoidmlub2FyeXN0aW8iLCJhIjoiY2x2M2JhMXlmMHBlaTJsb3FsM3hnNzBvOCJ9.9t-e--GUark8BwfBuRDchg";
+  const MAP_SERVICE_KEY = "";
+  const token = "";
   const [viewport, setViewport] = useState({
     latitude: -6.914744,
     longitude: 107.609811,
@@ -152,7 +151,7 @@ const Map = () => {
             data={dataIsochrone}
             type="line"
             color={{
-              "line-color": "#00ff00",
+              "line-color": "#fff",
               "line-width": 3,
             }}
           />
