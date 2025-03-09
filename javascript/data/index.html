@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Display MAPID Maps in 3D</title>
+    <meta
+      property="og:description"
+      content="Use extrusions to display buildings' height in 3D."
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@5.1.0/dist/maplibre-gl.css"
+    />
+    <script src="https://unpkg.com/maplibre-gl@5.1.0/dist/maplibre-gl.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body,
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      const MAP_SERVICE_KEY = "67cd32d24a98c422783c2292"; // ganti dengan API key Anda yang didapat dari menu map services di geo.mapid.io
+      const map = new maplibregl.Map({
+        style: `https://basemap.mapid.io/styles/street-new-generation/style.json?key=${MAP_SERVICE_KEY}`,
+        center: [107.6117887556604, -6.918605247117273],
+        zoom: 11.5,
+        bearing: 0,
+        container: "map",
+        canvasContextAttributes: { antialias: true },
+        attributionControl: true, // attribution control wajib ada sebagai syarat penggunaan mapid maps
+      });
+
+      let dataSMA;
+      let dataWilayah;
+      fetch("dataSMA.geojson")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          dataSMA = data;
+        });
+      fetch("dataWilayah.geojson")
+        .then((response) => response.json())
+        .then((data) => {
+          dataWilayah = data;
+        });
+
+      console.log(dataSMA);
+
+      map.on("load", () => {
+        console.log("map loaded");
+
+        map.addSource("polygon-source", {
+          type: "geojson",
+          data: dataWilayah,
+        });
+
+        map.addSource("points", {
+          type: "geojson",
+          data: dataSMA,
+        });
+
+        // Tambahkan layer untuk menampilkan titik
+        map.addLayer({
+          id: "polygon-layer",
+          type: "fill",
+          source: "polygon-source",
+          paint: {
+            "fill-color": "#000000",
+            "fill-opacity": 0.4,
+          },
+        });
+
+        map.addLayer({
+          id: "polygon-outline",
+          type: "line",
+          source: "polygon-source",
+          paint: {
+            "line-color": "#000000",
+            "line-width": 2,
+          },
+        });
+
+        map.addLayer({
+          id: "points-layer",
+          type: "circle",
+          source: "points",
+          paint: {
+            "circle-radius": 5, // Ukuran titik
+            "circle-color": "#ff0000", // Warna merah
+            "circle-stroke-width": 2,
+            "circle-stroke-color": "#fff",
+          },
+        });
+
+        // Event klik pada titik untuk menampilkan popup
+        map.on("click", "points-layer", function (e) {
+          var coordinates = e.features[0].geometry.coordinates.slice();
+          var title = e.features[0].properties.name;
+
+          new maplibregl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(`<b>${title}</b>`)
+            .addTo(map);
+        });
+
+        // Ubah cursor saat mengarah ke titik
+        map.on("mouseenter", "points-layer", function () {
+          map.getCanvas().style.cursor = "pointer";
+        });
+
+        map.on("mouseleave", "points-layer", function () {
+          map.getCanvas().style.cursor = "";
+        });
+      });
+    </script>
+  </body>
+</html>

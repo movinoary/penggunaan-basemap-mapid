@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav {
+  width: 100vw;
+  height: 10vh;
+  background-color: #205781;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.active {
+  outline: none;
+  border: none;
+  background: #4f959d;
+  color: #98d2c0;
+  border-radius: 5px;
+  width: 100px;
+  padding: 10px;
+}
+
+.noActive {
+  outline: none;
+  border: none;
+  background: #98d2c0;
+  color: #4f959d;
+  border-radius: 5px;
+  width: 100px;
+  padding: 10px;
+}

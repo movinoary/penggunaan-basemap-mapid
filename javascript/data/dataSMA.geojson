@@ -1,0 +1,518 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 1 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Ir. H. Juanda No.93<br>telephone: (022) 6013514",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Ir. H. Juanda No.93",
+        "telephone": "(022) 6013514"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.6127939, -6.8952281, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMAN 2 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Cihampelas No.173<br>telephone: (022) 2032462",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Cihampelas No.173",
+        "telephone": "(022) 2032462"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.6033944, -6.8891593, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 3 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Belitung No.8, Merdeka, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40113<br>telephone: (022) 4235154",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Belitung No.8, Merdeka, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40113",
+        "telephone": "(022) 4235154"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.6150349, -6.9122904, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 4 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Gardujati No.20<br>telephone: (022) 20512133",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Gardujati No.20",
+        "telephone": "(022) 20512133"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.5984261, -6.9194142, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 5 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Belitung No.8 <br>telephone: (022) 4206921",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Belitung No.8",
+        "telephone": "(022) 4206921"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.6154786, -6.9121403, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 6 Kota Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Pasir Kaliki No.51<br>telephone: (022) 6011309",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Pasir Kaliki No.51",
+        "telephone": "(022) 6011309"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.5978172, -6.9114345, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 7 Kota Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Lengkong Kecil No.53<br>telephone: (022) 4239947",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Lengkong Kecil No.53",
+        "telephone": "(022) 4239947"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.614946, -6.9233532, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 8 Kota Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Solontongan No.3<br>telephone: (022) 7304542",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Solontongan No.3",
+        "telephone": "(022) 7304542"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.6260189, -6.9388609, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 9 Kota Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Suparmin No.1A, Pajajaran, Kec. Cicendo, Kota Bandung, Jawa Barat 40173<br>telephone: (022) 6123806",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Suparmin No.1A, Pajajaran, Kec. Cicendo, Kota Bandung, Jawa Barat 40173",
+        "telephone": "(022) 6123806"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.5858351, -6.9010787, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 10 Kota Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Cikutra No.77<br>telephone: (022) 7273109",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Cikutra No.77",
+        "telephone": "(022) 7273109"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.6434091, -6.9026351, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 11 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Kembar Baru No.23<br>telephone: (022) 5201102",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Kembar Baru No.23",
+        "telephone": "(022) 5201102"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.6104429, -6.9406621, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 12 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Sekejati No.36<br>telephone: (022) 7310256",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Sekejati No.36",
+        "telephone": "(022) 7310256"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.646182, -6.9413098, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 13 Kota Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Raya Cibeureum No.52<br>telephone: (022) 20512133",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Raya Cibeureum No.52",
+        "telephone": "(022) 20512133"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.5649267, -6.903383, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 14 Kota Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Yudawastu Pramuka IV No.4<br>telephone: (022) 7202744",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Yudawastu Pramuka IV No.4",
+        "telephone": "(022) 7202744"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.6359145, -6.903012, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMAN 15 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Sarimanis I, Sarijadi, Kec. Sukasari, Kota Bandung, Jawa Barat 40151<br>telephone: (022) 6011309",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Sarimanis I, Sarijadi, Kec. Sukasari, Kota Bandung, Jawa Barat 40151",
+        "telephone": "(022) 6011309"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.5743651, -6.8782179, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMAN 16 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Mekarsari No.81<br>telephone: (022) 7102122",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Mekarsari No.81",
+        "telephone": "(022) 7102122"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.6568007, -6.9264691, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMAN 17 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Caringin, Babakan Ciparay, Kec. Babakan Ciparay, Kota Bandung, Jawa Barat 40223<br>telephone: (022) 6078486",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Caringin, Babakan Ciparay, Kec. Babakan Ciparay, Kota Bandung, Jawa Barat 40223",
+        "telephone": "(022) 6078486"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.5752125, -6.942434, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 18 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Madesa No.18<br>telephone: (022) 6013514",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Madesa No.18",
+        "telephone": "(022) 6013514"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.5852419, -6.9384125, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMAN 19 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Ir. H. Juanda Jl. Dago Pojok<br>telephone: (022) 2502465",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Ir. H. Juanda Jl. Dago Pojok",
+        "telephone": "(022) 2502465"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.6162922, -6.8737189, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 20 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Citarum No.23<br>telephone: (022) 4205268",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Citarum No.23",
+        "telephone": "(022) 4205268"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.6223002, -6.9044372, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 21 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Manjahlega No.30<br>telephone: (022) 7565909",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Manjahlega No.30",
+        "telephone": "(022) 7565909"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.6712828, -6.9568759, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMAN 22 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Rajamantri Kulon No.17A<br>telephone: (022) 7320643",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Rajamantri Kulon No.17A",
+        "telephone": "(022) 7320643"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.6309173, -6.9422068, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMAN 23 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Malangbong, Antapani Wetan, Kec. Antapani, Kota Bandung, Jawa Barat 40291<br>telephone:",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Malangbong, Antapani Wetan, Kec. Antapani, Kota Bandung, Jawa Barat 40291",
+        "telephone": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.6647549, -6.9128562, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 24 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. A.H. Nasution No.27<br>telephone: (022) 7800196",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. A.H. Nasution No.27",
+        "telephone": "(022) 7800196"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.6886681, -6.9083595, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 25 Kota Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Baturaden VIII No.21<br>telephone: (022) 7560119",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Baturaden VIII No.21",
+        "telephone": "(022) 7560119"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.6654954, -6.9661695, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMAN 26 Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Sukaluyu No.26<br>telephone: (022) 87836409",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Sukaluyu No.26",
+        "telephone": "(022) 87836409"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.7250054, -6.9174432, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 27 Kota Bandung",
+        "folders": null,
+        "description": "alamat: Jl. Utsman Bin Affan No.1<br>telephone: (022) 7838362",
+
+        "alt_mode": null,
+        "time_begin": null,
+        "time_end": null,
+        "time_when": null,
+        "alamat": "Jl. Utsman Bin Affan No.1",
+        "telephone": "(022) 7838362"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [107.7073143, -6.9588153, 0.0]
+      }
+    }
+  ]
+}
