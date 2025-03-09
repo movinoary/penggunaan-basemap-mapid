@@ -25,6 +25,12 @@ const Menu = () => {
       >
         Point Dynamic
       </button>
+      <button
+        className={pathSegments === "polygon-dynamic" ? "active" : "noActive"}
+        onClick={() => navigate("/polygon-dynamic")}
+      >
+        Polygon Dynamic
+      </button>
     </section>
   );
 };
