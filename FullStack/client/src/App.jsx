@@ -4,6 +4,7 @@ import Maps from "./pages/map";
 import Menu from "./menu";
 import PointStatic from "./pages/pointStatic";
 import PointDynamic from "./pages/pointDynamic";
+import PolygonDynamic from "./pages/polygonDynamic";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/maps" element={<Maps />} />
           <Route path="/point-static" element={<PointStatic />} />
           <Route path="/point-dynamic" element={<PointDynamic />} />
+          <Route path="/polygon-dynamic" element={<PolygonDynamic />} />
         </Routes>
       </main>
     </BrowserRouter>
