@@ -1,0 +1,147 @@
+Path "/"
+
+1. Get all  data 
+{
+    "query": ["*"],
+    "databse": "users"
+}
+
+2. Get data spesific 
+{
+    "query": ["id", "name"],
+    "databse": "users"
+}
+
+3. Get data with where
+{
+    "query": ["*"],
+    "databse": "users",
+    "parameter": {
+        "role_id" : "8ebe255b-89b2-40e2-9bc3-4e8beeabebab"
+    }
+}
+
+4. Get Data with limit 
+{
+    "query": ["*"],
+    "databse": "users",
+    "limit": "2"
+}
+
+5. Get Data with limit and offset 
+{
+    "query": ["*"],
+    "databse": "users",
+    "limit": "2",
+    "offset": "2"
+}
+
+Path "/join"
+
+6. Get Data Join  1 to 1
+[
+    "one to one",
+    {
+        "query": ["*"],
+        "database": "products",
+        "key": "createBy"
+    },
+    {
+        "query": ["*"],
+        "database": "users",
+        "key": "id"
+    }
+]
+
+7. Get Data Join 1 to 1 with parameter
+[
+    "one to one",
+    {
+        "query": ["mobile_number", "email", "username", "full_name", "id_user", "id_organization"],
+        "database": "users",
+        "parameter": {
+            "id_user" : "391"
+        },
+        "key" : "id_organization"
+    },
+    {
+        "query": ["organization_number", "npwp_number", 
+        "id_organization", "organization_name"],
+        "database": "organizations",
+        "key": "id_organization"
+    }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const joinDatabse = async (req, res) => {
+  const type = req.body[0];
+  const db1 = req.body[1];
+  const db2 = req.body[2];
+
+  //   console.log("db1", db1);
+
+  const database1 = {
+    query: db1.query || false,
+    database: db1.database || false,
+    parameter: db1.parameter || false,
+    limit: db1.limit || false,
+    offset: db1.offset || false,
+  };
+  const getDb1 = await configData(database1);
+
+  const database2 = getDb1[0].map(async (d) => {
+    const config = {
+      query: db2.query || false,
+      database: db2.database || false,
+      parameter: {
+        [db2["key"]]: d.createBy,
+      },
+      limit: db2.limit || false,
+      offset: db2.offset || false,
+    };
+
+    return await configData(config);
+    // const asd = await configData(config);
+    // console.log(asd);
+    // return asd;
+  });
+
+  const results = await database2;
+
+  //   console.log("type", type);
+  //   console.log("getdb1", getdb1);
+  console.log("getdb2", results);
+};
