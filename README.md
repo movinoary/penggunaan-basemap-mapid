@@ -18,7 +18,7 @@ Dalam folder javascript berisi penggunaan basemap mapid menggunakan teknologi va
 4. Penggunaan Data Polygon
 5. Penggunaan Data Marker
 6. Penggunaan Data Navigation
-7. Penggunaan Data dengan file JSON
+7. Penggunaan Data dengan file JSON (Jalankan dengan live server)
 ![JavaScript](assets/vanilaJS.png)
 
 ### ReactJS
